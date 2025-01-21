@@ -1,1 +1,1 @@
-# Obliczenia-in-ynierskie-w-chmurze
+# Obiczenia inżynierskie w chmurze
