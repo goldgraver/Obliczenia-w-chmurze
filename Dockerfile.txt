@@ -1,0 +1,20 @@
+#Obraz Pythona jako bazowy
+FROM python:3.9-slim
+
+# Instalacja wymaganych systemowych zależności dla matplotlib
+RUN apt-get update && apt-get install -y \
+    libfreetype6-dev \
+    libpng-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+#Instalacja bibliotek Pythona
+RUN pip install matplotlib numpy 
+
+#Ustawienie katalogu roboczego wewnątrz kontenera
+WORKDIR /home/goldgraver
+
+#Kopiowanie plików do kontenera
+COPY main.py /home/goldgraver/main.py
+
+#Domyślne uruchomienie pliku main.py
+CMD ["python","/home/goldgraver/main.py"]
