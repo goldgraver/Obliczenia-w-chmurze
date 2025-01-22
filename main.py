@@ -61,6 +61,7 @@ def calculate_stresses():
         plt.grid()
         plt.legend()
         plt.show()
+	plt.savefig("wykres.png")
 
     except ValueError as e:
         print(f"Błąd: {e}")
